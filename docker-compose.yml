@@ -1,0 +1,19 @@
+version: '3.4'
+
+services:
+  invite.server:
+    image: ${DOCKER_REGISTRY-}inviteserver
+    build:
+      context: .
+      dockerfile: invite.Server/Dockerfile
+
+  invite.client:
+    container_name: invite.client
+    image: ${DOCKER_REGISTRY-}inviteclient
+    build:
+      context: .
+      dockerfile: invite.client/Dockerfile
+    ports:
+      - "4200:4200"
+    depends_on:
+      - invite.server
