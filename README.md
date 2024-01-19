@@ -1,4 +1,4 @@
-##Pasos para correr proyecto.
+## Pasos para correr proyecto.
 
 1. Instalar __Docker desktop__
 2. Instalar __Visual Studio 2022__
