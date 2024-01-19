@@ -8,9 +8,21 @@ services:
       - ASPNETCORE_URLS=https://+;http://+
       - ASPNETCORE_HTTP_PORTS=80
       - ASPNETCORE_HTTPS_PORTS=443
+      - "ConnectionStrings:DefaultConnection=Server=localhost,1433;User ID=sa;Password=yourStrong(!)Password;Initial Catalog=invitedb;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
     ports:
       - "8001:80"
       - "8002:443"
     volumes:
       - ${APPDATA}/Microsoft/UserSecrets:/home/app/.microsoft/usersecrets:ro
       - ${APPDATA}/ASP.NET/Https:/home/app/.aspnet/https:ro
+    depends_on:
+      - mssql
+
+  mssql:
+    container_name: mssql
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=yourStrong(!)Password
+      - MSSQL_PID=Express
+    ports:
+      - "1433:1433"

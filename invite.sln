@@ -9,6 +9,8 @@ Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "invite.client", "invite.cli
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{C9DB4936-2420-40D2-B8A1-E82992E5F92B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{0C4940AD-EA0B-4D53-B55C-B14D5F8F7B4A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,10 @@ Global
 		{C9DB4936-2420-40D2-B8A1-E82992E5F92B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9DB4936-2420-40D2-B8A1-E82992E5F92B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9DB4936-2420-40D2-B8A1-E82992E5F92B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C4940AD-EA0B-4D53-B55C-B14D5F8F7B4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C4940AD-EA0B-4D53-B55C-B14D5F8F7B4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C4940AD-EA0B-4D53-B55C-B14D5F8F7B4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C4940AD-EA0B-4D53-B55C-B14D5F8F7B4A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
