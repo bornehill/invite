@@ -25,7 +25,8 @@
     "tslib": "^2.3.0",
     "zone.js": "~0.14.2",
     "jest-editor-support": "*",
-    "run-script-os": "*"
+    "run-script-os": "*",
+    "bootstrap": "^5.1.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^17.0.10",

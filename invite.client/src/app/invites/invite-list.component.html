@@ -1,0 +1,33 @@
+<h1 id="tableLabel">Invites</h1>
+
+<p>Invites list.</p>
+
+<p *ngIf="!invites"><em>Loading... Please refresh once the ASP.NET backend has started. See <a href="https://aka.ms/jspsintegrationangular">https://aka.ms/jspsintegrationangular</a> for more details.</em></p>
+
+<table *ngIf="invites" class="container col-6">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Full Name</th>
+      <th>Start Date</th>
+      <th>End Date</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let invite of invites">
+      <td>{{ invite.id }}</td>
+      <td>{{ invite.fullName }}</td>
+      <td>{{ invite.startDate }}</td>
+      <td>{{ invite.endDate }}</td>
+      <td>
+        <a class='nav-link' routerLinkActive='active' [routerLinkActiveOptions]="{exact: true}"
+           [routerLink]="['/invites',invite.id]">Edit</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<div>
+  <a class='nav-link' routerLinkActive='active' [routerLinkActiveOptions]="{exact: true}"
+     [routerLink]="['/invites/0']">Invite Add</a>
+</div>

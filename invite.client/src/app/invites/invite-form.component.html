@@ -1,0 +1,82 @@
+<h1 id="tableLabel">Invites Form</h1>
+<div>
+  <a class='nav-link' routerLinkActive='active' [routerLinkActiveOptions]="{exact: true}"
+     [routerLink]="['/invites']">Back</a>
+</div>
+<form novalidate [formGroup]="inviteForm" class="container col-6">
+  <div class="form-group row mb-2">
+    <label class="col-md-2 col-form-label"
+           for="inviteId">Id</label>
+    <div class="col-md-8">
+      <input class="form-control"
+             id="inviteId"
+             type="number"
+             formControlName="id"
+             [ngClass]="{'is-invalid': (inviteForm.get('id')?.touched ||
+                                            inviteForm.get('id')?.dirty) &&
+                                            !inviteForm.get('id')?.valid }" />
+      <span class="invalid-feedback">
+        <span *ngIf="inviteForm.get('id')?.errors?.['required']">
+          Please enter id.
+        </span>
+      </span>
+    </div>
+  </div>
+
+  <div class="form-group row mb-2">
+    <label class="col-md-2 col-form-label"
+           for="fullNameId">Full Name</label>
+    <div class="col-md-8">
+      <input class="form-control"
+             id="fullNameId"
+             type="text"
+             formControlName="fullName"
+             [ngClass]="{'is-invalid': (inviteForm.get('fullName')?.touched ||
+                                            inviteForm.get('fullName')?.dirty) &&
+                                            !inviteForm.get('fullName')?.valid }" />
+      <span class="invalid-feedback">
+        <span *ngIf="inviteForm.get('fullName')?.errors?.['required']">
+          Please enter full name.
+        </span>
+      </span>
+    </div>
+  </div>
+
+  <div class="form-group row mb-2">
+    <label class="col-md-2 col-form-label"
+           for="startDateId">Star Date</label>
+    <div class="col-md-8">
+      <input class="form-control"
+             id="startDateId"
+             type="date"
+             formControlName="startDate"
+             [ngClass]="{'is-invalid': (inviteForm.get('startDate')?.touched ||
+                                            inviteForm.get('startDate')?.dirty) &&
+                                            !inviteForm.get('startDate')?.valid }" />
+      <span class="invalid-feedback">
+        <span *ngIf="inviteForm.get('startDate')?.errors?.['required']">
+          Please enter start date.
+        </span>
+      </span>
+    </div>
+  </div>
+
+  <div class="form-group row mb-2">
+    <label class="col-md-2 col-form-label"
+           for="endDateId">End Date</label>
+    <div class="col-md-8">
+      <input class="form-control"
+             id="endDateId"
+             type="date"
+             formControlName="endDate"
+             [ngClass]="{'is-invalid': (inviteForm.get('endDate')?.touched ||
+                                            inviteForm.get('endDate')?.dirty) &&
+                                            !inviteForm.get('endDate')?.valid }" />
+      <span class="invalid-feedback">
+        <span *ngIf="inviteForm.get('endDate')?.errors?.['required']">
+          Please enter end date.
+        </span>
+      </span>
+    </div>
+  </div>
+</form>
